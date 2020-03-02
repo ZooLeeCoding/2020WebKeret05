@@ -1,10 +1,11 @@
-<h2>
+<div fxLayout="column" fxLayoutAttribute="center center" class="signup-form">
+  <h2>
   {{title}}
 </h2>
 <h4>
   {{child_message}}
 </h4>
-<button (click)="handleClick()">
+<button mat-raised-button color="primary" (click)="handleClick()">
   Ez egy gomb
 </button>
 <ul>
@@ -15,7 +16,7 @@
 <h2 *ngIf="title === 'WebKeret03'">
   Ez most látszódik
 </h2>
-<input type='text' placeholder='szoveg' [(ngModel)]='title'>
+<input matInput type='text' placeholder='szoveg' [(ngModel)]='title'>
 <div>
   <app-string-ops></app-string-ops>
 </div>
@@ -24,4 +25,5 @@
 </div>
 <div>
   <app-reactive-form></app-reactive-form>
+</div>
 </div>
