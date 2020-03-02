@@ -11,6 +11,8 @@ import { FirstChildComponent } from './first-child/first-child.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
+import { MaterialModule } from './material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
