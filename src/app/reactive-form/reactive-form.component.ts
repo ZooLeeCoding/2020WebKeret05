@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,14 +11,15 @@ export class ReactiveFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { 
     this.bookForm = fb.group({
-      title: [''],
-      author: [''],
+      title: ['', Validators.required],
+      author: ['', Validators.required],
       published: [''],
-      price: ['']
+      price: ['', Validators.required]
     })
    }
 
    onSubmit() {
+     console.log(this.bookForm.valid);
      console.log(this.bookForm.value);
    }
 

@@ -12,6 +12,10 @@
         <label>Price:</label>
         <input type="number" formControlName="price">
 
-        <button type="submit">Beküldés</button>
+        <button type="submit" [disabled]="!bookForm.valid">Beküldés</button>
+
+        <div>
+            {{bookForm.value.toString()}}
+        </div>
     </form>
-</div>>
+</div>
